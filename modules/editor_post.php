@@ -3,7 +3,7 @@ $file_name = $_FILES['thumb']['name'];
 $tmp_file = $_FILES['thumb']['tmp_name'];
 
 $file_path = '../../images/event/'.$file_name;
-$image_url = '../../images/event/'.$file_name;
+$image_url = $_SERVER['SERVER_NAME'].'/images/event/'.$file_name;
 
 $r = move_uploaded_file($tmp_file, $file_path);
 

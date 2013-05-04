@@ -37,8 +37,8 @@ class UploadHandler
     function __construct($options = null, $initialize = true, $error_messages = null) {
         $this->options = array(
             'script_url' => $this->get_full_url().'/',
-            'upload_dir' => '../../images/slide/',
-            'upload_url' => $this->get_full_url().'/slide_images/',
+            'upload_dir' => '/var/www/ccl_muse/images/slide/',
+            'upload_url' => $this->get_full_url().'images/slide/',
             'user_dirs' => false,
             'mkdir_mode' => 0755,
             'param_name' => 'files',
@@ -786,7 +786,7 @@ class UploadHandler
                     if (is_file($file)) {
                         unlink($file);
                     }
-                }
+                }	
             }
         }
 
