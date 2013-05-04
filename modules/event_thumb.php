@@ -34,8 +34,8 @@ $full_URI = $base_URL.$_SERVER['REQUEST_URI'];
 $file_name = $_FILES['event_thumb']['name'];
 $tmp_file = $_FILES['event_thumb']['tmp_name'];
 
-$file_path = $_SERVER['DOCUMENT_ROOT'].'/event_images/'.$file_name;
-$image_url = $web_path.'event_images/'.$file_name;
+$file_path = '../../images/event/'.$file_name;
+$image_url = $web_path.'../../images/event/'.$file_name;
 
 $r = move_uploaded_file($tmp_file, $file_path);
 
@@ -46,6 +46,6 @@ if( $fh = @fopen( "logfile.txt", "w+" ) )
   fputs( $fh, var_dump($_POST), 20 );
   fclose( $fh );
 }
-echo 'event_images/'.$file_name;
+echo '../../images/event/'.$file_name;
 ?>
 

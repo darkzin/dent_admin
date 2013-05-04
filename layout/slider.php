@@ -9,16 +9,6 @@
     <meta name="viewport" content="width=device-width">
     <?php require_once('parts/import_css.php') ?>
     <style type="text/css">
-      body {
-      margin: 0;
-      width: 100%;
-      }
-      header {
-      line-height: 5em;
-      background-color: #6cf;
-      width: 100%;
-      }
-
       .preview {
       margin: 2em;
       }
@@ -41,15 +31,20 @@
 	<?php //require_once ('parts/navigation.php') ?>  
 	<div class="contents span9">
 	  <div class="preview">
+	    <span class="buttons">
+	      <div class="btn-group btn-group-vertical">
+		<input id="move-up" class="btn span1" type="button" value="Up" />
+		<input id="move-down" class="btn span1" type="button" value="Down" />
+	      </div>
+	      <div class="btn-group">
+		<input id="submit" class="btn btn-primary" type="button" value="submit" />
+		<input id="delete" class="btn btn-danger" type="button" value="delete" />
+	      </div>
+	    </span>
 	    <select id="list-box" multiple="multiple" size="5">
 	    </select>	
-	    <input id="move-up" type="button" value="Move Up" />
-	    <input id="move-down" type="button" value="Move Down" />
-	    <input id="submit" type="button" value="submit" />
-	    <input id="delete" type="button" value="delete" />
 	  </div>
 	  <?php require_once ('parts/fileUpload_form.php') ?>
-	  <br></br>
 	</div>
       </div>
     </div>

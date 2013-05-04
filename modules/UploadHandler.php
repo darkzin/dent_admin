@@ -37,7 +37,7 @@ class UploadHandler
     function __construct($options = null, $initialize = true, $error_messages = null) {
         $this->options = array(
             'script_url' => $this->get_full_url().'/',
-            'upload_dir' => dirname($_SERVER['SCRIPT_FILENAME']).'/slide_images/',
+            'upload_dir' => '../../images/slide/',
             'upload_url' => $this->get_full_url().'/slide_images/',
             'user_dirs' => false,
             'mkdir_mode' => 0755,

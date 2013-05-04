@@ -6,7 +6,7 @@ $event_thumb = $_POST['event_thumb'];
 $datetime = strtotime($row->createdate);
 $mysqldate = date("Y-m-d H:i:s", $datetime);
 
-$q = "INSERT INTO event(title, content, popup_image) VALUES ('".$subject."', '".$content"', '".$event_thumb."', '".$mysqldate."')";
+$q = "INSERT INTO event(title, content, popup_image) VALUES ('".$subject."', '".$content"', '".$event_thumb.".", now());";
 
 //mysql connect.
 $mysqli = new mysqli('localhost', 'dent_admin', 'skyseed', 'dent_mobile');
